@@ -1,3 +1,4 @@
+require 'pry'
 class Waiter
     attr_accessor :name, :y_o_e
 
@@ -24,5 +25,6 @@ class Waiter
     def best_tipper
         tipped = meals.max {|a, b| a.tip <=> b.tip}
         tipped.customer
+        # binding.pry
     end
 end
